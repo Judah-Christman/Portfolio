@@ -1,0 +1,111 @@
+.to-do-list {
+	width: 100%;
+}
+
+h1{
+	width: fit-content;
+	font-family: sans-serif;
+	color: #f6f6f6;
+	font-size: 40px;
+	margin: 10% auto 2%;
+}
+
+/*.flex-container{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}*/
+
+.input-container{
+	/*width: 75%;
+	margin: auto;*/
+	width: 100%;
+}
+
+input {
+	width: 30%;
+	height: 25px;
+	padding: 5px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	border: solid 3px black;
+	border-radius: 5px;
+/*	margin-right: 3px;*/
+}
+
+.add-button{
+	width: fit-content;
+	height: 40px;
+	padding: 5px;
+	margin-left: -15%;
+	background: green;
+	color: #f6f6f6;
+	border: solid 3px black;
+	border-radius: 5px;
+	transition: 0.3s;}
+	.add-button:hover{
+		color: lightgreen;
+	}
+
+
+ul {
+	width: fit-content;
+	margin-top: 3%;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+ul li {
+	width: 100%;
+	padding: 5px;
+	margin: 2% 0;
+	background: #f6f6f6;
+	font-family: sans-serif;
+	border: solid black 3px;
+	border-radius: 10px;
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.text {
+	width: fit-content;
+	flex: 1;	
+}
+
+ul li button{
+	margin: auto 3px;
+	padding: 5px;
+}
+
+.delete-button {
+	color: red;
+	border: 3px solid red;
+	border-radius: 10px;
+	transition: 0.3s;}
+	.delete-button:hover{
+		color: #f6f6f6;
+		background: red;
+	}
+
+.up-button{
+	color: black;
+	border: 3px solid black;
+	border-radius: 10px;
+	transition: 0.3s;}
+	.up-button:hover{
+		color: blue;
+		transform: translateY(-3px);
+		
+	}
+
+.down-button{
+	color: black;
+	border: 3px solid black;
+	border-radius: 10px;
+	transition: 0.3s;}
+	.down-button:hover{
+		color: blue;
+		transform: translateY(3px);
+		
+	}

@@ -1,0 +1,243 @@
+
+.navigation {
+  position: fixed;
+  width: 10%;
+  height: 75%;
+  padding: 5px;
+  margin-left: 3%;
+  border-radius: 15px;
+  transition: 0.5s;
+/*  background: #161616;*/
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navList {
+  position: fixed;
+  width: 90%;
+  list-style: none;
+/*  background: #161616;*/
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.link {
+  position: relative;
+  width: fit-content;
+  color: #f6f6f6;
+  list-style: none;
+  margin: 40% auto;
+}
+
+.linkStyle {
+  text-decoration: none;
+  color: #e9e9e9;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  transition: 0.5s;
+}
+
+.linkStyle:hover {
+  color: lightgreen;
+}
+
+.backgroundColor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#333333 0%, #161616 100%);
+}
+
+.landing {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/background.png");
+  background-size: cover;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.mainSection {
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  width: 80%;
+  height: 90%;
+}
+
+
+
+
+.Jkc {
+  width: 100%;
+  height: 50%;
+/*  border: 1px solid white;*/
+  margin: 20px;
+}
+
+.paragraph {
+  width: 50%;
+  color: #f6f6f6;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+
+.headshot {
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  background-image: url("images/headshot.jpg");
+  background-size: cover;
+  box-shadow: 0 0 8px 8px #161616 inset;
+  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+}
+
+.squirtle {
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  background-image: url("images/squirtle.png");
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.squirtle:hover{
+  cursor: pointer;
+}
+
+.wartortle {
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  background-image: url("images/wartortle.png");
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.wartortle:hover{
+  cursor: pointer;
+}
+
+.blastoise {
+  position: absolute;
+  top: 60%;
+  right: 5%;
+  background-image: url("images/Blastoise.png");
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.blastoise:hover{
+  cursor: pointer;
+}
+
+.title {
+  width: fit-content;
+  background: linear-gradient(45deg, lightblue 0%, lightgreen 50%, lightblue 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  padding: 10px;
+  margin: 10px 4%;
+  font-size: 30px;
+}
+.smallTitle {
+  width: fit-content;
+  background: linear-gradient(45deg, lightblue 0%, lightgreen 50%, lightblue 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  padding: 10px;
+  margin: 10px 5%;
+  font-size: 25px;
+}
+
+.spacing {
+  margin: 5% auto 30%;
+}
+
+.footer {
+  position: absolute;
+  width: 95%;
+  color: #161616;
+  margin: 0 20px;
+  padding: 5px;
+  border-radius: 10px;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottomText {
+  color: #f6f6f6;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  width: 20%;
+  left: 3%;
+  bottom: 1%;
+}
+
+.social{
+  position: absolute;
+  width: 10%;
+  right: 3%;
+  bottom: 1%;
+}
+
+.socialLinks{
+  margin: 0 5%;
+}
+
+
+
+.figure {
+  width: 200px;
+  margin: 10% auto;
+  text-decoration: none;
+}
+
+.figure:hover {
+  cursor: pointer;
+}
+
+
+.figureTitle {
+  width: 20%;
+  margin: 10px auto;
+  background: linear-gradient(45deg, lightgreen 0%, lightblue 50%, lightgreen 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.figureCap{
+  width: 100%;
+  color: #f6f6f6;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.flexContainer {
+  display: flex;
+  width: 100%;
+}
