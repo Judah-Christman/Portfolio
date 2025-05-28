@@ -39,12 +39,7 @@ function Navigation(){
         <div className="fixed top-3 right-3 text-4xl text-red-400 hover:cursor-pointer" onClick={handleNav }>X</div>
         <h1 className="w-fit text-green-300 text-5xl p-2 hover:underline"><Link href="./" onClick={handleNav}>Home</Link></h1>
         <h1 onClick={handleProject} className="w-fit text-green-300 text-5xl p-2 hover:underline hover:cursor-pointer">Projects</h1>
-        {projects ? <AnimatePresence><div 
-                      className="w-full flex justify-center relative"
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0}}
-                      >
+        {projects ? <div className="w-full flex justify-center relative">
 
           <Link href="/projects/devices" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
           <motion.figure 
@@ -83,7 +78,7 @@ function Navigation(){
             <figcaption className="w-full text-xl text-[#f6f6f6] text-center">Web Apps</figcaption>
           </motion.figure>
           </Link>
-        </div></AnimatePresence> : ""}
+        </div> : ""}
         <h1 onClick={handleHobbie} className="w-fit text-green-300 text-5xl p-2 hover:underline hover:cursor-pointer">Hobbies</h1>
         {hobbies ? <div className="w-full flex justify-center relative">
           <Link href="/fishing" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
