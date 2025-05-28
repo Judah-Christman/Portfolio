@@ -2,8 +2,6 @@ import Image from "next/image";
 import "./globals.css"
 import React from 'react';
 import { Navigation } from './components.jsx';
-import { Projects } from './components.jsx';
-import { Hobbies } from './components.jsx';
 import { motion } from 'framer-motion';
 import images from './images/headshot.jpg';
 import squirtle from './images/squirtle.png';
