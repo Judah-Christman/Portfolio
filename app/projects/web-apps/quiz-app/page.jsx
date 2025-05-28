@@ -42,7 +42,7 @@ function Quiz(){
 	return(
 		<div className="flex justify-center items-center h-screen">
 			<div className="max-w-lg w-full bg-[#444444] p-5 rounded shadow-lg">
-				<h1 className="text-center text-5xl text-emerald-400 ">Quiz App</h1>
+				<h1 className="text-center text-5xl text-[#f6f6f6] ">Quiz App</h1>
 				<div className="">
 					
 					{showScore ? <div className="text-md text-[#e9e9e9] m-3">You scored {score} of {questions.length}</div> :

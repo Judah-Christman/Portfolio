@@ -4,7 +4,6 @@ import motion from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import github from "./images/github.png";
-import logo from "./images/logo.png";
 import { Navigation } from "./components.jsx";
 
 
@@ -26,8 +25,8 @@ export default function RootLayout({
         <div className="w-full p-2 relative bg-green-300 flex justify-between">
           <p className="">Judah Christman 2025</p>
             <a href="https://github.com/Judah-Christman" target="_blank">
-              <img
-                src="./images/github.png"
+              <Image
+                src={github}
                 width={30}
                 height={30}
                 style={{ position: "absolute", right: "5px" }}

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import logo from "./images/logo.png";
 import devices from './images/devices.png';
 import application from './images/application.png';
 import fly from './images/fly.png';
@@ -61,7 +61,7 @@ function Navigation(){
               // width={200}
               // height={200}
               alt="devices" />
-            <figcaption className="w-full text-2xl text-[#f6f6f6] text-center">Robotics/Devices</figcaption>
+            <figcaption className="w-full text-xl text-[#f6f6f6] text-center">Robotics/ Devices</figcaption>
           </motion.figure>
           </Link>
 
@@ -80,7 +80,7 @@ function Navigation(){
               // width={200}
               // height={200}
               alt="devices" />
-            <figcaption className="w-full text-2xl text-[#f6f6f6] text-center">Web Apps</figcaption>
+            <figcaption className="w-full text-xl text-[#f6f6f6] text-center">Web Apps</figcaption>
           </motion.figure>
           </Link>
         </div></AnimatePresence> : ""}
@@ -101,7 +101,7 @@ function Navigation(){
               // width={200}
               // height={200}
               alt="Fishing" />
-            <figcaption className="w-full text-2xl text-[#f6f6f6] text-center">Fishing</figcaption>
+            <figcaption className="w-full text-xl text-[#f6f6f6] text-center">Fishing</figcaption>
           </motion.figure>
           </Link>
 
@@ -120,11 +120,11 @@ function Navigation(){
               // width={200}
               // height={200}
               alt="devices" />
-            <figcaption className="w-full text-2xl text-[#f6f6f6] text-center">Writing</figcaption>
+            <figcaption className="w-full text-xl text-[#f6f6f6] text-center">Writing</figcaption>
           </motion.figure>
           </Link>
         </div> : ""}
-      </div> : <div className="w-fit fixed top-3 right-3 text-5xl text-green-300 hover:cursor-pointer" onClick={handleNav}>=</div>}
+      </div> : <div className="w-[75px] fixed top-3 right-3 text-5xl text-green-300 hover:cursor-pointer" onClick={handleNav}><Image src={logo} alt="logo" style={{ width: "100%", height: "auto"}} /></div>}
     </>
   );
 }

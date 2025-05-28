@@ -11,9 +11,9 @@ export default function Devices(){
 
 	return(
 		<>
-			<div className="w-full h-dvh bg-[url(./images/device-background.png)] bg-contain overflow-y-scroll">
+			<div className="w-full h-full bg-[url(./images/device-background.png)] bg-contain">
 				<h1 className="w-full text-5xl text-green-300 text-center my-10">Robotics and Devices</h1>
-				<p className="w-2/3 text-justify text-[#f6f6f6] text-lg m-auto">
+				<p className="w-full p-2 md:w-2/3 text-justify text-[#f6f6f6] text-lg m-auto">
 					My first introduction to programing was not actually in webdevelopment but robotics. Specifically, I was introduced
 					 to the robotics platform and hardware from <Link className="font-semibold" href="https://arduino.cc" target="_blank">Arduino</Link>.
 					  I spent many of my pre-teen and teen years learning and creating various devices and toys with the Arduino boards. 
@@ -25,7 +25,7 @@ export default function Devices(){
 
 				<div className="w-full">
 					<p className="w-full text-7xl text-green-300 text-center my-20">:(</p>
-					<p className="w-2/3 text-lg text-[#f6f6f6] text-center m-auto">Sorry, but it looks like there are no projects to display right now. Try checking in later!</p>
+					<p className="w-full px-2 pb-10 md:w-2/3 text-lg text-[#f6f6f6] text-center m-auto">Sorry, but it looks like there are no projects to display right now. Try checking in later!</p>
 				</div>
 			</div>
 		</>

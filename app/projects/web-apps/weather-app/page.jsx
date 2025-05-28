@@ -21,7 +21,7 @@ export default function WeatherApp(){
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-5xl text-emerald-400 text-center">Weather App</h1>
+      <h1 className="text-5xl text-[#f6f6f6] text-center">Weather App</h1>
       <div className="flex mb-4 mt-4">
         <input 
         type="text"

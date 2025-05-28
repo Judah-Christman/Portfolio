@@ -24,7 +24,7 @@ export default function(){
 
 
 	return(
-		<div className="w-full h-dvh bg-[url(/images/fish-background.png)] bg-cover overflow-y-scroll">
+		<div className="w-full h-full bg-[url(/images/fish-background.png)] bg-contain">
 			<h1 className="w-full text-5xl text-green-300 text-center my-10">Fishing</h1>
 			<p className=" p-2 md:w-1/3 text-lg text-[#f6f6f6] text-justify m-auto">
 				One of my hobbies is fishing. I am particularly fond of fly fishing and even tie my own flies! Take a look at some of the flies I have tied and fish I have caught!
