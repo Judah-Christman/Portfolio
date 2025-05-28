@@ -32,7 +32,7 @@ function Navigation(){
     setHobbies(false);
     setProjects(false);
   }
-
+// create Navigation
   return (
     <>
       {nav ? <div className=" fixed w-full h-screen bg-gray-600/90  z-50"> 
