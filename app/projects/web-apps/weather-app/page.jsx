@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from "react";
-import "./css/weather-style.css";
 import { getWeather } from './js/api.js';
 
 export default function WeatherApp(){

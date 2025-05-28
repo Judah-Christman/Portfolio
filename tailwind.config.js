@@ -2,7 +2,9 @@
 module.exports = {
   content: [
     // "./app/projects/web-apps/quiz-app/page.jsx",
-    "./app/projects/web-apps/**/*.{jsx, tsx, js, ts}",
+    "./app/**/*.{jsx, tsx, js, ts}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "app/page.tsx",
   ],
   theme: {
     extend: {},

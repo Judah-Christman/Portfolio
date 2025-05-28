@@ -9,6 +9,7 @@ import weather from "./images/weather.png";
 import quiz from "./images/quiz.png";
 import github from "./images/github.png"
 import christmanhorseshoeing from "./images/christmanhorseshoeing.png";
+import chRedesign from "./images/chRedesign.png";
 
 export default function webApps(){
 
@@ -23,9 +24,6 @@ export default function webApps(){
 	return(
 		<div className={styles.backgroundColor}>
 			<div className={styles.backgroundDesign}>
-				<nav>
-					<a href="../" className={styles.homeLink} title="Go Back to Home">JKC</a>
-				</nav>
 				<section id="top">
 					<h1 className={styles.title}>Web Apps</h1>
 					<p className={styles.paragraph}>Below are a number of different web apps I have created to learn various concepts and challenge my skills. These projects have all been great learning opportunities as they build off of each other to create deeper, fuller web applications.</p>
@@ -52,8 +50,7 @@ export default function webApps(){
           			</figure>
           			<div className={styles.appInfo} style={{visibility: toggle ? "visible" : "hidden"}}>
           				Tools Used: 
-          				<ul>
-          					<li>Next.js</li>
+          				<ul>          					
           					<li>React</li>
           					<li>CSS3</li>
           				</ul>
@@ -73,7 +70,6 @@ export default function webApps(){
           			<div className={styles.appInfo} style={{visibility: toggle ? "visible" : "hidden"}}>
           				Tools Used: 
           				<ul>
-          					<li>Next.js</li>
           					<li>React</li>
           					<li>Tailwindcss</li>
           				</ul>
@@ -112,7 +108,7 @@ export default function webApps(){
               			width={200}
               			height={200}
               			alt={"quiz"}
-              			className={styles.figureImg} />
+              			style={{ borderRadius: "15px"}} />
             			<figcaption className={styles.figureCap}>Christman Horseshoeing</figcaption>
           			</figure>
           			<div className={styles.appInfo} style={{visibility: toggle ? "visible" : "hidden"}}>
@@ -121,6 +117,26 @@ export default function webApps(){
           					<li>HTML5</li>
           					<li>CSS3</li>
           					<li>Javascript</li>
+          				</ul>
+          			</div>
+          			</Link>
+
+          			<Link href="https://ch-redesign.vercel.app/" target="_blank" className={styles.figure}>
+					<figure>
+            			<Image
+              			src={chRedesign}
+              			width={200}
+              			height={200}
+              			alt={"quiz"}
+              			style={{ borderRadius: "15px"}} />
+            			<figcaption className={styles.figureCap}>Christman Horseshoeing (Redesign)</figcaption>
+          			</figure>
+          			<div className={styles.appInfo} style={{visibility: toggle ? "visible" : "hidden"}}>
+          				Tools Used: 
+          				<ul>
+          					<li>NextJS</li>
+          					<li>Tailwindcss</li>
+          					<li>Framer Motion</li>
           				</ul>
           			</div>
           			</Link>

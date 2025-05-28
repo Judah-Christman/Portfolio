@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import styles from "./page.module.css";
+import motion from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import github from "./images/github.png";
+import logo from "./images/logo.png";
+import { Navigation } from "./components.jsx";
 
 
 export const metadata: Metadata = {
@@ -18,19 +21,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Navigation />
         {children}
-        <div>
-          <p className={styles.bottomText}>Judah Christman 2025</p>
-          <div className={styles.social}>
-            <a className={styles.socialLinks}>
-              <Image
-                src={github}
+        <div className="w-full p-2 relative bg-green-300 flex justify-between">
+          <p className="">Judah Christman 2025</p>
+            <a href="https://github.com/Judah-Christman" target="_blank">
+              <img
+                src="./images/github.png"
                 width={30}
                 height={30}
+                style={{ position: "absolute", right: "5px" }}
                 alt="github"
               />
             </a>
-          </div>
         </div>
       </body>
     </html>

@@ -1,6 +1,5 @@
 "use client"
 import React, { Component, useState } from "react";
-import "./css/quiz-style.css";
 import questions from "./js/questions.js";
 
 
