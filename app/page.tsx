@@ -22,11 +22,11 @@ import blastoise from './images/Blsatoise.png';
 export default function Home() {
 
   return (
-    <div className="w-full bg-[url(../public/images/home-background.png)] bg-cover">
+    <div className="w-full h-fit bg-[url(../public/images/home-background.png)] bg-cover">
       
       <h1 className="w-full text-green-300 text-5xl text-center py-20">Judah Christman</h1>
       <div className="w-full flex justify-center flex-wrap py-5">
-        <p className="w-full md:w-1/3 p-2 text-lg text-[#f6f6f6] text-justify mr-5">
+        <p className="w-full md:w-1/3 px-2 text-lg text-[#f6f6f6] text-justify mr-5">
           Hello! I am a front-end web developer with about 6 years of experience crafting dynamic and engaging 
           websites as a hobby. My journey began utilizing HTML, CSS, and JavaScript, and over the years, I have been 
           diving deeper into modern front-end technologies. <br/><br/> 
