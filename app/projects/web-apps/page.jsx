@@ -60,7 +60,7 @@ export default function webApps(){
           				Tools Used: 
           				<ul>          					
           					<li>React</li>
-          					<li>CSS3</li>
+          					<li>Tailwind CSS</li>
           				</ul>
           			</div>
           			</motion.figure>
@@ -87,7 +87,7 @@ export default function webApps(){
           				Tools Used: 
           				<ul>
           					<li>React</li>
-          					<li>Tailwindcss</li>
+          					<li>Tailwind CSS</li>
           				</ul>
           			</div>
           			</motion.figure>
@@ -115,7 +115,7 @@ export default function webApps(){
           				Tools Used: 
           				<ul>
           					<li>React</li>
-          					<li>Tailwindcss</li>
+          					<li>Tailwind CSS</li>
           					<li>OpenWeather API</li>
           				</ul>
           			</div>
@@ -176,7 +176,7 @@ export default function webApps(){
           				Tools Used: 
           				<ul>
           					<li>NextJS</li>
-          					<li>Tailwindcss</li>
+          					<li>Tailwind CSS</li>
           					<li>Framer Motion</li>
           				</ul>
           			</div>

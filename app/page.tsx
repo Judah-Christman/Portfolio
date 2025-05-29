@@ -30,9 +30,7 @@ export default function Home() {
           Hello! I am a front-end web developer with about 6 years of experience crafting dynamic and engaging 
           websites as a hobby. My journey began utilizing HTML, CSS, and JavaScript, and over the years, I have been 
           diving deeper into modern front-end technologies. <br/><br/> 
-          Lately, I have been exploring the power of React and Next.js, building lightning-fast, scalable applications 
-          that look and feel greatl. I am also loving the flexibility of Tailwind CSS, which has elevated my design game and sreamlined 
-          my workflow. <br/><br/>
+          Lately, I have been exploring the power of React and Next.js, building lightning-fast, scalable applications that look and feel great. I am also loving the flexibility of Tailwind CSS, which has elevated my design game and streamlined my workflow. <br/><br/>
           I am always curious and eager to learn the latest tools and trends in web development. Let's build something awesome together!
         </p>
         <div className="relative w-[200px] md:w-1/4">
