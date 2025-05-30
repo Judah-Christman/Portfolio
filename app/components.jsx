@@ -119,6 +119,7 @@ function Navigation(){
           </motion.figure>
           </Link>
         </div> : ""}
+        <h1 className="w-fit text-green-300 text-5xl p-2 hover:underline"><Link href="https://judahchristman.com/contact" onClick={handleNav}>Contact</Link></h1>
       </div> : <div className="w-[75px] fixed top-3 right-3 text-5xl text-green-300 hover:cursor-pointer" onClick={handleNav}><Image src={logo} alt="logo" style={{ width: "100%", height: "auto"}} /></div>}
     </>
   );
