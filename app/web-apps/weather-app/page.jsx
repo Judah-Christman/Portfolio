@@ -16,6 +16,8 @@ export default function WeatherApp(){
       setWeather(null);
       setError('City not found');
     }
+    console.log("API key:", process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY);
+
   };
 
 
