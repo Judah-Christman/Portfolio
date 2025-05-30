@@ -37,7 +37,7 @@ function Navigation(){
     <>
       {nav ? <div className=" fixed w-full h-screen bg-gray-600/90  z-50"> 
         <div className="fixed top-3 right-3 text-4xl text-red-400 hover:cursor-pointer" onClick={handleNav }>X</div>
-        <h1 className="w-fit text-green-300 text-5xl p-2 hover:underline"><Link href="./" onClick={handleNav}>Home</Link></h1>
+        <h1 className="w-fit text-green-300 text-5xl p-2 hover:underline"><Link href="https://judahchristman.com" onClick={handleNav}>Home</Link></h1>
         <h1 onClick={handleProject} className="w-fit text-green-300 text-5xl p-2 hover:underline hover:cursor-pointer">Projects</h1>
         {projects ? <div className="w-full flex justify-center relative">
 
