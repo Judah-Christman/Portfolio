@@ -35,9 +35,9 @@ export default function Home() {
         </p>
         <div className="relative w-[200px] md:w-1/4">
           <Image src={images} style={{ width: "100%", height: "auto", borderRadius: "100%", paddingTop: "10px" }} alt="headshot" />
-          <div className="absolute w-1/2 bottom-0 -right-5 ">
+          {/*<div className="absolute w-1/2 bottom-0 -right-5 ">
             <Image src={squirtle} style={{ width: "100%", height: "auto", }} alt="squirtle" />
-          </div>
+          </div>*/}
         </div>
       </div>
 
