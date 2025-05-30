@@ -38,7 +38,7 @@ export default function webApps(){
 				{/*begin list of apps*/}
 				<section className="w-full px-2 py-[20px] flex flex-wrap justify-center">
 				
-					<Link href="/projects/web-apps/to-do-list" className="w-1/3 md:w-[200px] mx-5 md:m-auto" >
+					<Link href="/web-apps/to-do-list" className="w-1/3 md:w-[200px] mx-5 md:m-auto" >
 					<motion.figure className="relative w-full"
 					whileHover={{
             			scale: 1.2,
@@ -66,7 +66,7 @@ export default function webApps(){
           			</motion.figure>
           			</Link>
 
-          			<Link href="/projects/web-apps/quiz-app"  className="w-1/3 md:w-[200px] mx-5 md:m-auto">
+          			<Link href="/web-apps/quiz-app"  className="w-1/3 md:w-[200px] mx-5 md:m-auto">
 					<motion.figure className="relative w-full"
 					whileHover={{
             			scale: 1.2,
@@ -93,7 +93,7 @@ export default function webApps(){
           			</motion.figure>
           			</Link>
 
-          			<Link href="/projects/web-apps/weather-app"  className="w-1/3 md:w-[200px] mx-5 md:m-auto">
+          			<Link href="/web-apps/weather-app"  className="w-1/3 md:w-[200px] mx-5 md:m-auto">
 					<motion.figure className="relative w-full"
 					whileHover={{
             			scale: 1.2,

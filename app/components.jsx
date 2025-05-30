@@ -41,7 +41,7 @@ function Navigation(){
         <h1 onClick={handleProject} className="w-fit text-green-300 text-5xl p-2 hover:underline hover:cursor-pointer">Projects</h1>
         {projects ? <div className="w-full flex justify-center relative">
 
-          <Link href="/projects/devices" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
+          <Link href="./devices" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
           <motion.figure 
           className="opacity-100"
           whileHover={{
@@ -60,7 +60,7 @@ function Navigation(){
           </motion.figure>
           </Link>
 
-          <Link href="/projects/web-apps" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
+          <Link href="./web-apps" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
           <motion.figure 
           className="opacity-100"
           whileHover={{
@@ -81,7 +81,7 @@ function Navigation(){
         </div> : ""}
         <h1 onClick={handleHobbie} className="w-fit text-green-300 text-5xl p-2 hover:underline hover:cursor-pointer">Hobbies</h1>
         {hobbies ? <div className="w-full flex justify-center relative">
-          <Link href="/fishing" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
+          <Link href="./fishing" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
           <motion.figure 
           className="opacity-100"
           whileHover={{
@@ -100,7 +100,7 @@ function Navigation(){
           </motion.figure>
           </Link>
 
-          <Link href="/writing" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
+          <Link href="./writing" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
           <motion.figure 
           className="opacity-100"
           whileHover={{
