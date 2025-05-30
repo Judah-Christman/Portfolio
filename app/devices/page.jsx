@@ -11,7 +11,7 @@ export default function Devices(){
 
 	return(
 		<>
-			<div className="w-full h-full bg-[url(./images/device-background.png)] bg-contain">
+			<div className="w-full min-h-dvh max-height-full bg-[url(./images/device-background.png)] bg-contain">
 				<h1 className="w-full text-5xl text-green-300 text-center py-10">Robotics and Devices</h1>
 				<p className="w-full p-2 md:w-2/3 text-justify text-[#f6f6f6] text-lg m-auto">
 					My first introduction to programming was not actually in web development but robotics. Specifically, I was introduced
