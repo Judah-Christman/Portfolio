@@ -22,7 +22,7 @@ import blastoise from './images/Blsatoise.png';
 export default function Home() {
 
   return (
-    <div className="w-full h-fit bg-[url(../public/images/home-background.png)] bg-cover">
+    <div className="w-full min-h-dvh max-h-full bg-[url(../public/images/home-background.png)] bg-cover">
       
       <h1 className="w-full text-green-300 text-5xl text-center py-20">Judah Christman</h1>
       <div className="w-full flex justify-center flex-wrap py-5">
