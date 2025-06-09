@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import github from "./images/github.png";
 import { Navigation } from "./components.jsx";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 export const metadata: Metadata = {
