@@ -10,6 +10,7 @@ import quiz from "./images/quiz.png";
 import github from "./images/github.png"
 import christmanhorseshoeing from "./images/christmanhorseshoeing.png";
 import chRedesign from "./images/chRedesign.png";
+import leaveYourName from "./images/leaveYourName.png";
 
 export default function webApps(){
 
@@ -93,7 +94,7 @@ export default function webApps(){
           			</motion.figure>
           			</Link>
 
-          			<Link href="/web-apps/weather-app"  className="w-1/3 md:w-[200px] mx-5 md:m-auto">
+          			<Link href="/web-apps/weather-app" className="w-1/3 md:w-[200px] mx-5 md:m-auto">
 					<motion.figure className="relative w-full"
 					whileHover={{
             			scale: 1.2,
@@ -117,6 +118,35 @@ export default function webApps(){
           					<li>React</li>
           					<li>Tailwind CSS</li>
           					<li>OpenWeather API</li>
+          				</ul>
+          			</div>
+          			</motion.figure>
+          			</Link>
+
+          			<Link href="https://leave-your-name.vercel.app/" target="_blank" className="w-1/3 md:w-[200px] mx-5 md:m-auto" >
+					<motion.figure className="relative w-full"
+					whileHover={{
+            			scale: 1.2,
+            			transition: {
+              				duration: 0.2
+            			}
+          				}}
+          				whileTap={{ scale: 0.7 }}>
+            			<Image
+              			src={leaveYourName}
+              			style={{ width: "100%", height: "auto" }}
+              			// width={200}
+              			// height={200}
+              			alt={"leaveYourName"}
+              			 />
+            			<figcaption className="w-full text-xl text-[#f6f6f6] text-center pt-2">Simple To-Do List</figcaption>
+          			
+          			<div className="w-full text-lg text-center text-[#f6f6f6]" style={{visibility: toggle ? "visible" : "hidden"}}>
+          				Tools Used: 
+          				<ul>          					
+          					<li>Next.js</li>
+          					<li>Supabase Database</li>
+          					<li>Tailwind CSS</li>
           				</ul>
           			</div>
           			</motion.figure>
@@ -175,13 +205,15 @@ export default function webApps(){
           			<div className="w-full text-lg text-center text-[#f6f6f6]" style={{visibility: toggle ? "visible" : "hidden"}}>
           				Tools Used: 
           				<ul>
-          					<li>NextJS</li>
+          					<li>Next.js</li>
           					<li>Tailwind CSS</li>
           					<li>Framer Motion</li>
           				</ul>
           			</div>
           		</motion.figure>
           			</Link>
+
+
 
 				</section>
 			</div>
