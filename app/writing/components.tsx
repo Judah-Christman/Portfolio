@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState, FormEvent } from 'react';
-import { supabase } from '../devices/supabase.js';
+import { supabase } from '@/devices/supabase';
 import { Filter } from 'bad-words';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
