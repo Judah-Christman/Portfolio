@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import "../globals.css";
 import flies from "./flies.js";
 import catches from "./fish.js";
@@ -31,12 +31,17 @@ export default function(){
 			</p>
 			<div className="my-10">
 				<h2 className="w-1/4 text-green-300 text-3xl text-center">Flies</h2>
-				<p className="w-full p-2 text-[#f6f6f6] text-justify md:text-center">Click the button below to view some of the flies I have created!</p>
+				<p className="w-full p-2 text-[#f6f6f6] text-justify md:text-center">Click the button below to view some of the flies I have created!</p>				
 				<div className="w-full">
-					{fly ? "" : 
-					<div 
+					{fly ? null : 
+					<motion.div 
 					className="w-full flex justify-center"
-					
+					initial={{ opacity: 0, scale: 0 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						opacity: { duration: 0.4 },
+						scale: { duration: 0.4 }
+					}}
 					>
 						{flies.map((src, index)=>(
 							<Image
@@ -51,8 +56,9 @@ export default function(){
 
 
 
+
 						
-					</div> 
+					</motion.div> 
 				}
 				<motion.button
 					className="w-fit block text-[#f6f6f6] text-lg bg-green-500 border-green-300 rounded-xl border border-2 p-2 my-10 mx-auto"
@@ -61,7 +67,7 @@ export default function(){
 					whileTap={{ rotate: 5 }}
 					onClick={handleFly}
 					>{fly ? "Show Flies" : "Hide Flies"}</motion.button>
-				</div>
+				</div>				
 				<hr className="w-3/4 mx-auto my-5"/>
 			</div>
 			<div>
@@ -69,9 +75,14 @@ export default function(){
 				<p className="w-full p-2 text-[#f6f6f6] text-justify md:text-center">Click the button to view some of the fish I have caught</p>
 				<div>
 					{fish ? "" : 
-				<div 
+				<motion.div 
 					className="w-full flex justify-center"
-					
+					initial={{ opacity: 0, scale: 0 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						opacity: { duration: 0.4 },
+						scale: { duration: 0.4 }
+					}}
 					>
 						{catches.map((src, index)=>(
 							<Image
@@ -87,7 +98,7 @@ export default function(){
 
 
 						
-					</div> }
+					</motion.div> }
 					<motion.button
 					className="w-fit block text-[#f6f6f6] text-lg bg-green-500 border-green-300 rounded-xl border border-2 p-2 my-10 mx-auto"
 					initial={{ scale: 1 }}

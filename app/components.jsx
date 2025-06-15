@@ -35,11 +35,29 @@ function Navigation(){
 // create Navigation
   return (
     <>
-      {nav ? <div className=" fixed w-full h-screen bg-gray-600/90  z-50"> 
+      <AnimatePresence>{nav && <motion.div className=" fixed w-full h-screen bg-gray-600/90  z-50"
+              key="navigation"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                opacity: { duration: 0.4 },
+              }}> 
         <div className="fixed top-3 right-3 text-4xl text-red-400 hover:cursor-pointer" onClick={handleNav }>X</div>
         <h1 className="w-fit text-green-300 text-5xl p-2 hover:underline"><Link href="https://judahchristman.com" onClick={handleNav}>Home</Link></h1>
         <h1 onClick={handleProject} className="w-fit text-green-300 text-5xl p-2 hover:underline hover:cursor-pointer">Projects</h1>
-        {projects ? <div className="w-full flex justify-center relative">
+        <AnimatePresence>
+        {projects ? <motion.div 
+                      className="w-full flex justify-center relative"
+                      key="projects"
+                      initial={{ opacity: 0, x: -2000 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -2000}}
+                      transition={{
+                        opacity: { duration: 0.4, },
+                        x: { duration: 0.4 }
+                        
+                      }}>
 
           <Link href="https://judahchristman.com/devices" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
           <motion.figure 
@@ -78,9 +96,22 @@ function Navigation(){
             <figcaption className="w-full text-xl text-[#f6f6f6] text-center">Web Apps</figcaption>
           </motion.figure>
           </Link>
-        </div> : ""}
+        </motion.div> : null}
+        </AnimatePresence>
+        
         <h1 onClick={handleHobbie} className="w-fit text-green-300 text-5xl p-2 hover:underline hover:cursor-pointer">Hobbies</h1>
-        {hobbies ? <div className="w-full flex justify-center relative">
+        <AnimatePresence>
+        {hobbies ? <motion.div 
+                    className="w-full flex justify-center relative"
+                    key="hobbies"
+                      initial={{ opacity: 0, x: -2000 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -2000}}
+                      transition={{
+                        opacity: { duration: 0.4, },
+                        x: { duration: 0.4 }
+                        
+                      }}>
           <Link href="https://judahchristman.com/fishing" className="relative w-1/4 md:w-[200px] m-auto" onClick={handleNav}>
           <motion.figure 
           className="opacity-100"
@@ -118,9 +149,21 @@ function Navigation(){
             <figcaption className="w-full text-xl text-[#f6f6f6] text-center">Writing</figcaption>
           </motion.figure>
           </Link>
-        </div> : ""}
+        </motion.div> : null}
+        </AnimatePresence>
         <h1 className="w-fit text-green-300 text-5xl p-2 hover:underline"><Link href="https://judahchristman.com/contact" onClick={handleNav}>Contact</Link></h1>
-      </div> : <div className="w-[75px] fixed top-3 right-3 text-5xl text-green-300 hover:cursor-pointer" onClick={handleNav}><Image src={logo} alt="logo" style={{ width: "100%", height: "auto"}} /></div>}
+      </motion.div> }</AnimatePresence>
+      <div className="w-[75px] fixed top-3 right-3 text-5xl text-green-300 hover:cursor-pointer" onClick={handleNav}>
+        <Image src={logo} alt="logo" style={{ width: "100%", height: "auto"}} />
+        <motion.p 
+        className="absolute top-0 -left-20 w-full text-green-300 text-center text-lg"
+        initial={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 0, scale: 0 }}
+        transition={{
+          opacity: { delay: 2, duration: 0.4 },
+          scale: { delay: 2, duration: 0.4 }
+        }}>Click Me! -&gt;</motion.p>
+      </div>
     </>
   );
 }

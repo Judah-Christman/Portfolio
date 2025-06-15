@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import motion from "framer-motion";
+import {motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import github from "./images/github.png";

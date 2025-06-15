@@ -1,7 +1,7 @@
 "use client"
 import React from "react";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, inView } from "framer-motion";
 import Link from 'next/link';
 import Image from 'next/image';
 import todolist from "./images/todolist.png";
@@ -29,10 +29,16 @@ export default function webApps(){
 					<h1 className="w-full text-5xl text-green-300 text-center py-10">Web Apps</h1>
 					<p className="w-full md:w-2/3 mx-auto text-xl text-[#f6f6f6] text-justify p-2">Below are a number of different web apps I have created to learn various concepts and challenge my skills. These projects have all been great learning opportunities as they build off of each other to create deeper, fuller web applications.</p>
 					<br />
-					<div className="w-full">
+					<motion.div 
+					className="w-full"
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{
+						opacity: { duration: 0.4 }
+					}}>
 						<p className="w-full md:w-2/3 mx-auto text-xl text-[#f6f6f6] text-justify p-2" style={{"textAlign": "center"}}>Press the button below to view the tools I used in these apps!</p>
 						<button className="block w-[50px] h-[25px] rounded-lg mx-auto" onClick={handleToggle} style={{background: toggle ? "lightgreen" : "red"}}></button>
-					</div>
+					</motion.div>
 				</section>
 
 				
@@ -41,6 +47,10 @@ export default function webApps(){
 				
 					<Link href="/web-apps/to-do-list" className="w-1/3 md:w-[200px] mx-5 md:m-auto" >
 					<motion.figure className="relative w-full"
+					initial={{ x: "-100%", opacity: 0 }}
+          			whileInView={{ x: 0, opacity: 1 }}
+          			transition={{ duration: 0.4, ease: 'easeInOut'}}
+          			viewport={{ once: true }}
 					whileHover={{
             			scale: 1.2,
             			transition: {
@@ -69,6 +79,10 @@ export default function webApps(){
 
           			<Link href="/web-apps/quiz-app"  className="w-1/3 md:w-[200px] mx-5 md:m-auto">
 					<motion.figure className="relative w-full"
+					initial={{ x: "-100%", opacity: 0 }}
+          			whileInView={{ x: 0, opacity: 1 }}
+          			transition={{ duration: 0.4, ease: 'easeInOut'}}
+          			viewport={{ once: true }}
 					whileHover={{
             			scale: 1.2,
             			transition: {
@@ -96,6 +110,10 @@ export default function webApps(){
 
           			<Link href="/web-apps/weather-app" className="w-1/3 md:w-[200px] mx-5 md:m-auto">
 					<motion.figure className="relative w-full"
+					initial={{ x: "-100%", opacity: 0 }}
+          			whileInView={{ x: 0, opacity: 1 }}
+          			transition={{ duration: 0.4, ease: 'easeInOut'}}
+          			viewport={{ once: true }}
 					whileHover={{
             			scale: 1.2,
             			transition: {
@@ -123,8 +141,12 @@ export default function webApps(){
           			</motion.figure>
           			</Link>
 
-          			<Link href="https://leave-your-name.vercel.app/" target="_blank" className="w-1/3 md:w-[200px] mx-5 md:m-auto" >
+          			<Link href="https://leave-your-name.vercel.app/" target="_blank" className="w-1/3 md:w-[200px] mx-5 md:m-auto"  >
 					<motion.figure className="relative w-full"
+					initial={{ x: "-100%", opacity: 0 }}
+          			whileInView={{ x: 0, opacity: 1 }}
+          			transition={{ duration: 0.4, ease: 'easeInOut'}}
+          			viewport={{ once: true }}
 					whileHover={{
             			scale: 1.2,
             			transition: {
@@ -159,6 +181,10 @@ export default function webApps(){
 
 				<Link href="https://christmanhorseshoeing.com" target="_blank" className="w-1/3 md:w-[200px] mx-5 md:m-auto">
 					<motion.figure className="relative w-full"
+					initial={{ x: "-100%", opacity: 0 }}
+          			whileInView={{ x: 0, opacity: 1 }}
+          			transition={{ duration: 0.4, ease: 'easeInOut'}}
+          			viewport={{ once: true }}
 					whileHover={{
             			scale: 1.2,
             			transition: {
@@ -187,6 +213,10 @@ export default function webApps(){
 
           			<Link href="https://ch-redesign.vercel.app/" target="_blank" className="w-1/3 md:w-[200px] mx-5 md:m-auto">
 					<motion.figure className="relative w-full"
+					initial={{ x: "-100%", opacity: 0 }}
+          			whileInView={{ x: 0, opacity: 1 }}
+          			transition={{ duration: 0.4, ease: 'easeInOut'}}
+          			viewport={{ once: true }}
 					whileHover={{
             			scale: 1.2,
             			transition: {

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact(){
 	const [completed, setCompleted] = useState(false);
@@ -39,7 +40,17 @@ export default function Contact(){
 					{completed ?  <p className="w-full px-2 text-2xl text-[#f6f6f6] text-center">Thank you for reaching out! I will get back to you as soon as I can!</p> : 
 					<div>
 					<p className="w-full px-2 text-2xl text-[#f6f6f6] text-center py-5 ">Use the form below to contact me!</p>
-					<form onSubmit={handleSubmit} className="w-full md:w-1/3 md:m-auto h-full md:bg-[#444444] rounded-xl flex flex-col p-2">
+					<motion.form 
+						onSubmit={handleSubmit} 
+						className="w-full md:w-1/3 md:m-auto h-full md:bg-[#444444] rounded-xl flex flex-col p-2"
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{
+							opacity: { duration: 0.4 },
+							scale: { duration: 0.4 }
+						}}
+
+					>
 
 	          			<div>
     	          			<label htmlFor="name" className="text-xl p-1 text-[#f6f6f6]">Name</label>
@@ -61,7 +72,7 @@ export default function Contact(){
           					<input type="checkbox" name="botcheck" className="hidden" style={{display: "none"}}/>
           				</div>
           				<button  type="submit" className="w-1/3 block mx-auto my-2 p-2 bg-green-400 rounded-xl transition delay-150 duration-300 ease-in-out hover:scale-[1.2]">Submit Form</button>
-					</form></div>}
+					</motion.form></div>}
 				</div>
 				
 			</div>

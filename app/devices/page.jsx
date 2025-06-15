@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Projects } from "./components.tsx";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -24,8 +25,8 @@ export default function Devices(){
 				</p>
 
 				<div className="w-full">
-					<p className="w-full text-7xl text-green-300 text-center my-20">:(</p>
-					<p className="w-full px-2 pb-10 md:w-2/3 text-lg text-[#f6f6f6] text-center m-auto">Sorry, but it looks like there are no projects to display right now. Try checking in later!</p>
+					<Projects />
+					
 				</div>
 			</div>
 		</>
