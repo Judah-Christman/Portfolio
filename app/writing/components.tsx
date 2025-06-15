@@ -9,7 +9,7 @@ const filter = new Filter();
 
 function Stories(){
 
-	const [story, setStory] = useState<{ id: string; name: string }[]>([]);
+	const [story, setStory] = useState<{ id: string; title: string; file: string }[]>([]);
 
 	useEffect(()=>{
 		fetchStories();

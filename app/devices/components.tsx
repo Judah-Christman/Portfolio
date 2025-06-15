@@ -9,7 +9,7 @@ const filter = new Filter();
 
 function Projects(){
 
-	const [project, setProject] = useState<{ id: string; name: string }[]>([]);
+	const [project, setProject] = useState<{ id: string; link: string description: string; title: string }[]>([]);
 	const [newProject, setNewProject] = useState("")
 
 	useEffect(()=>{
