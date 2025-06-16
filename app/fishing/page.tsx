@@ -25,11 +25,11 @@ export default function(){
 
 	return(
 		<div className="w-full min-h-dvh max-h-full bg-[url(/images/fish-background.png)] bg-cover">
-			<h1 className="w-full text-5xl text-green-300 text-center my-10">Fishing</h1>
+			<h1 className="w-full text-5xl text-green-300 text-center py-10">Fishing</h1>
 			<p className=" p-2 md:w-1/3 text-lg text-[#f6f6f6] text-justify m-auto">
 				One of my hobbies is fishing. I am particularly fond of fly fishing and even tie my own flies! Take a look at some of the flies I have tied and fish I have caught!
 			</p>
-			<div className="my-10">
+			<div className="py-10">
 				<h2 className="w-1/4 text-green-300 text-3xl text-center">Flies</h2>
 				<p className="w-full p-2 text-[#f6f6f6] text-justify md:text-center">Click the button below to view some of the flies I have created!</p>				
 				<div className="w-full">
@@ -68,7 +68,7 @@ export default function(){
 					onClick={handleFly}
 					>{fly ? "Show Flies" : "Hide Flies"}</motion.button>
 				</div>				
-				<hr className="w-3/4 mx-auto my-5"/>
+				<hr className="w-3/4 mx-auto py-5"/>
 			</div>
 			<div>
 				<h2 className="w-1/4 text-green-300 text-3xl text-center">Fish</h2>
