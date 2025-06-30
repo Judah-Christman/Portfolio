@@ -24,6 +24,8 @@ export default function RootLayout({
       <body>
         <Navigation />
         {children}
+        <Analytics />
+        <SpeedInsights />
         <div className="w-full p-2 relative bg-green-300 flex justify-between">
           <p className="">Judah Christman 2025</p>
             <a href="https://github.com/Judah-Christman" target="_blank">
