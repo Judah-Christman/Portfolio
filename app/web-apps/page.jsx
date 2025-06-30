@@ -161,7 +161,7 @@ export default function webApps(){
               			// height={200}
               			alt={"leaveYourName"}
               			 />
-            			<figcaption className="w-full text-xl text-[#f6f6f6] text-center pt-2">Leave Your Name</figcaption>
+            			<figcaption className="w-full text-xl text-[#f6f6f6] text-center pt-2">Leave A Message</figcaption>
           			
           			<div className="w-full text-lg text-center text-[#f6f6f6]" style={{visibility: toggle ? "visible" : "hidden"}}>
           				Tools Used: 

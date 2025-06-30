@@ -6,6 +6,7 @@ import Link from "next/link";
 import github from "./images/github.png";
 import { Navigation } from "./components.jsx";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next"
 
 
 export const metadata: Metadata = {
