@@ -11,6 +11,7 @@ import github from "./images/github.png"
 import christmanhorseshoeing from "./images/christmanhorseshoeing.png";
 import chRedesign from "./images/chRedesign.png";
 import leaveYourName from "./images/leaveYourName.png";
+import rbs from "./images/rbs.png";
 
 export default function webApps(){
 
@@ -231,6 +232,38 @@ export default function webApps(){
               			alt={"quiz"}
               			style={{ borderRadius: "15px"}} />
             			<figcaption className="w-full text-xl text-[#f6f6f6] text-center pt-2">Christman Horseshoeing (Redesign)</figcaption>
+          			
+          			<div className="w-full text-lg text-center text-[#f6f6f6]" style={{visibility: toggle ? "visible" : "hidden"}}>
+          				Tools Used: 
+          				<ul>
+          					<li>Next.js</li>
+          					<li>Tailwind CSS</li>
+          					<li>Framer Motion</li>
+          				</ul>
+          			</div>
+          		</motion.figure>
+          			</Link>
+
+          			<Link href="https://retro-buy-sell.vercel.app" target="_blank" className="w-1/3 md:w-[200px] mx-5 md:m-auto">
+					<motion.figure className="relative w-full"
+					initial={{ x: "-100%", opacity: 0 }}
+          			whileInView={{ x: 0, opacity: 1 }}
+          			transition={{ duration: 0.4, ease: 'easeInOut'}}
+          			viewport={{ once: true }}
+					whileHover={{
+            			scale: 1.2,
+            			transition: {
+              				duration: 0.2
+            			}
+          				}}
+          			whileTap={{ scale: 0.7 }}>
+            			<Image
+              			src={rbs}
+              			width={200}
+              			height={200}
+              			alt={"Retro Buy & Sell"}
+              			style={{ borderRadius: "15px"}} />
+            			<figcaption className="w-full text-xl text-[#f6f6f6] text-center pt-2">Retro Buy & Sell</figcaption>
           			
           			<div className="w-full text-lg text-center text-[#f6f6f6]" style={{visibility: toggle ? "visible" : "hidden"}}>
           				Tools Used: 
