@@ -31,13 +31,7 @@ export default function Home() {
           opacity: { duration: 0.4, },
           y: { duration: 0.4 }
         }}>
-        <p className="w-full md:w-1/3 p-2 text-lg text-[#f6f6f6] text-justify mr-5 backdrop-blur-lg bg-green-300/60 rounded-xl"
-        initial={{ opacity: 0, y: "100%" }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          opacity: { duration: 0.4, },
-          y: { duration: 0.4 }
-        }}>
+        <p className="w-full md:w-1/3 p-2 text-lg text-[#f6f6f6] text-justify mr-5 backdrop-blur-lg bg-green-300/60 rounded-xl">
           Hello! I am a web developer who has been crafting websites for the last 6 years. Most of my experience comes from creating websites for fun as a hobby but have built a few websites for local businesses.
 I have built many different websites from simple landing pages advertising businesses to multipage websites managed by an admin dashboard. I specialize in Next.js, Tailwind CSS, and Framer Motion, developing quick and interactive websites and web apps for all kinds of needs. I have also developed sites that integrate with databases using REST api’s, or that pull data from online csv sheets. Whether you need a landing page to advertise your business and provide contact information, or an admin console managed webpage that displays your products and/or events, I have you covered. Reach out today and I am sure we can develop something great together!
  
