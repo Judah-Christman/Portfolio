@@ -177,7 +177,7 @@ export default function webApps(){
 				</section>
 
 				{/*begin list of websites*/}
-				<h2 className="w-full text-4xl text-center text-green-300 pb-10">Websites</h2>
+				<h2 id="websites" className="w-full text-4xl text-center text-green-300 pb-10">Websites</h2>
 				<section className="w-full flex flex-wrap">
 
 				<Link href="https://christmanhorseshoeing.com" target="_blank" className="w-1/3 md:w-[200px] mx-5 md:m-auto">
