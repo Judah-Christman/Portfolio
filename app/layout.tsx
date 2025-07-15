@@ -12,6 +12,7 @@ import { Analytics } from "@vercel/analytics/next"
 export const metadata: Metadata = {
   title: "Judah Christman",
   description: "Portfolio/Personal website for web development, hobbies, and more!",
+  keywords: ["web development", "judah christman", "judah", "christman", "frontend web development", "web design", "developer", "freelance", "local", "website"],
 };
 
 export default function RootLayout({
