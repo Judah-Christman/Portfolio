@@ -11,7 +11,7 @@ import fly from './images/fly.png';
 import videoGames from './images/videoGames.png';
 import study from './images/study.png';
 
-
+// This comment is to test the git push to temp branch
 
 // Create Navigation bar
 function Navigation(){
