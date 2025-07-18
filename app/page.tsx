@@ -5,7 +5,6 @@ import React from 'react';
 import { useState } from 'react';
 import { Navigation, Home, About, Contact } from './components.jsx';
 import { motion } from 'framer-motion';
-import images from './images/headshot.jpg';
 
 
 

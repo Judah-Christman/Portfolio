@@ -3,7 +3,6 @@ import "./globals.css";
 import {motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import github from "./images/github.png";
 import { Navigation } from "./components.jsx";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next"
@@ -27,11 +26,11 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
-        <div className="w-full p-2 relative bg-green-300 flex justify-between">
+        <div className="w-full p-2 relative bg-green-400 flex justify-between">
           <p className="">Judah Christman 2025</p>
             <a href="https://github.com/Judah-Christman" target="_blank">
-              <Image
-                src={github}
+              <img
+                src="/images/github.png"
                 width={30}
                 height={30}
                 style={{ position: "absolute", right: "5px" }}
