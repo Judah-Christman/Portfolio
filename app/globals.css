@@ -1,3 +1,5 @@
+/*@import "tailwindcss";*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,4 +33,9 @@ p, a {
 
 .outlined-text{
   -webkit-text-stroke: 1px black;
+}
+
+.angled {
+  border-right: solid transparent;
+  border-bottom: solid transparent;
 }

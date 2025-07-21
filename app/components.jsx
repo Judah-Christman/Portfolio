@@ -19,10 +19,10 @@ function Navigation(){
           <ul className="w-full flex items-start">
             <img src="/images/logo.png" width={75} height={75} alt="logo home"/>
             <li className="w-fit text-xl text-[#fafafa] font-semibold hover:underline px-1 md:px-5 my-auto">
-              <Link href="#home">Home</Link>
+              <Link href="/#home">Home</Link>
             </li>
             <li className="w-fit text-xl text-[#fafafa] font-semibold hover:underline px-1 md:px-5 my-auto">
-              <Link href="#about">About</Link>
+              <Link href="/#about">About</Link>
             </li>
             <li 
               className="w-fit text-xl text-[#fafafa] font-semibold hover:underline hover:cursor-pointer px-1 md:px-5 my-auto"
@@ -35,7 +35,7 @@ function Navigation(){
               </ul>
             </li>
             <li className="w-fit text-xl text-[#fafafa] font-semibold hover:underline px-1 md:px-5 my-auto">
-              <Link href="#contact">Contact</Link>
+              <Link href="/#contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -46,7 +46,7 @@ function Navigation(){
 
 function Home(){
   return(
-    <section id="home" className="w-full min-h-dvh bg-gradient-to-r from-green-300/10 to-green-400/100">
+    <section id="home" className="w-full min-h-dvh bg-gradient-to-r from-green-400/100 to-green-300/20">
       <div className="w-full min-h-dvh bg-[url(/images/home-background.png)] bg-cover">
           <h1 className="w-full text-5xl md:text-7xl text-[#fafafa] text-center pt-[70%] sm:pt-[20%]">Judah Christman</h1>
           <p className="w-full text-xl text-[#fafafa] text-center">Web Designer and Developer</p>

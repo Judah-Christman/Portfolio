@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Navigation } from "./components.jsx";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next"
+import type { ReactNode } from "react";
+import { Providers } from "@/components/providers";
 
 
 export const metadata: Metadata = {
@@ -23,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navigation />
-        {children}
+        <Providers>{children}</Providers>
         <Analytics />
         <SpeedInsights />
         <div className="w-full p-2 relative bg-green-400 flex justify-between">
