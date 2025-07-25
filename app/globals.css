@@ -35,6 +35,8 @@ p, a {
   -webkit-text-stroke: 1px black;
 }
 
-.angled {
+@layer components {
+  .angled {
   clip-path: polygon(0 0, 100% 0, calc(100% - 70px) 100%, 0 100%);
+  }
 }
