@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from 'framer-motion';
-import { Projects } from "./components.tsx";
+import { Websites } from "./components.tsx";
 
-export default function Websites(){
+export default function Projects(){
 
 
 
@@ -14,7 +14,7 @@ export default function Websites(){
       			</div>
 				
 			</section>
-			<Projects />
+			<Websites />
 		</section>
 	);
 }

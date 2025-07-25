@@ -14,7 +14,7 @@ function Navigation(){
 
 // create Navigation
   return (
-    <section id="navigation" className="fixed w-full">
+    <section id="navigation" className="fixed w-full z-50">
         <div className="w-full h-20 bg-[#333333]">
           <ul className="w-full flex items-start">
             <img src="/images/logo.png" width={75} height={75} alt="logo home"/>
@@ -60,7 +60,7 @@ function About(){
     <section id="about" className="w-full h-fit">
 
       <h2 className="w-full text-5xl text-green-300 text-center pt-20">About Me...</h2>
-        <div className="w-full sm:grid grid-cols-2 gap-x-0 items-center overflow-x-hidden">
+        <div className="w-full lg:grid grid-cols-2 gap-x-0 items-center overflow-x-hidden">
           <motion.div
             className="overflow-hidden"
             initial={{ x: "-100%" }}
@@ -75,7 +75,7 @@ function About(){
             whileInView={{ x: 0 }}
             transition={{ duration: 0.5, ease: 'easeInOut'}}
             viewport={{ once: true }}>
-            <p className="sm:w-3/4 mx-auto p-3 text-justify text-lg text-[#fafafa] mb-20 bg-green-400/70 sm:my-20 sm:rounded-3xl sm:h-3/4 border-[5px] border-green-400 ">Hello! I am a web developer who has been crafting websites for the last 6 years. Most of my experience comes from creating websites for fun as a hobby but have built a few websites for local businesses. I have built many different websites from simple landing pages advertising businesses to multipage websites managed by an admin dashboard. I specialize in Next.js, Tailwind CSS, and Framer Motion, developing quick and interactive websites and web apps for all kinds of needs. I have also developed sites that integrate with databases using REST api’s, or that pull data from online csv sheets. Whether you need a landing page to advertise your business and provide contact information, or an admin console managed webpage that displays your products and/or events, I have you covered. Reach out today and I am sure we can develop something great together!</p>
+            <p className="sm:w-full md:w-3/4 mx-auto p-3 text-justify text-lg text-[#fafafa] mb-20 bg-green-400/70 sm:my-20 sm:rounded-3xl sm:h-3/4 border-[5px] border-green-400 ">Hello! I am a web developer who has been crafting websites for the last 6 years. Most of my experience comes from creating websites for fun as a hobby but have built a few websites for local businesses. I have built many different websites from simple landing pages advertising businesses to multipage websites managed by an admin dashboard. I specialize in Next.js, Tailwind CSS, and Framer Motion, developing quick and interactive websites and web apps for all kinds of needs. I have also developed sites that integrate with databases using REST api’s, or that pull data from online csv sheets. Whether you need a landing page to advertise your business and provide contact information, or an admin console managed webpage that displays your products and/or events, I have you covered. Reach out today and I am sure we can develop something great together!</p>
           </motion.div>
         </div>
     </section>
@@ -112,13 +112,13 @@ function Contact(){
     <section id="contact" className="w-full h-fit">
       <div className="w-full sm:w-3/4 sm:mx-auto my-10">
         {completed ?  <p className="w-full px-2 py-20 text-2xl text-[#f6f6f6] text-center">Thank you for reaching out! I will get back to you as soon as I can!</p> : 
-          <div className="w-full min-h-fit my-20 sm:grid grid-cols-2">
+          <div className="w-full min-h-fit my-20 sm:grid grid-cols-2 overflow-x-hidden">
             <div>
             <p className="w-full px-2 text-2xl text-[#f6f6f6] text-center py-5 ">Use the form below to contact me!</p>
             <motion.form 
               onSubmit={handleSubmit} 
               className="w-full md:w-3/4 md:m-auto h-fit bg-green-400/70 rounded-xl flex flex-col p-5 my-10"
-              initial={{ x: -500 }}
+              initial={{ x: "-100%" }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
               viewport={{ once: true }}
@@ -147,7 +147,7 @@ function Contact(){
             </motion.form>
             </div>
             <motion.div
-            initial={{ x: 500 }}
+            initial={{ x: "100%" }}
               whileInView={{ x: 0 }}
               transition={{ duration: 0.5, ease: 'easeInOut' }}
               viewport={{ once: true }}><img src="/gifs/giphy.gif" className="w-3/4 m-auto sm:mt-20" /></motion.div>

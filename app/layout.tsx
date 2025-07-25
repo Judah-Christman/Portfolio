@@ -28,14 +28,14 @@ export default function RootLayout({
         <Providers>{children}</Providers>
         <Analytics />
         <SpeedInsights />
-        <div className="w-full p-2 relative bg-green-400 flex justify-between">
-          <p className="">Judah Christman 2025</p>
+        <div className="w-full h-20 p-2 relative bg-green-400 flex justify-between">
+          <p className="m-auto">Judah Christman 2025</p>
             <a href="https://github.com/Judah-Christman" target="_blank">
               <img
                 src="/images/github.png"
                 width={30}
                 height={30}
-                style={{ position: "absolute", right: "5px" }}
+                className="block my-auto"
                 alt="github"
               />
             </a>
