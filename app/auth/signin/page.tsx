@@ -33,36 +33,10 @@ export default function SignInPage() {
   }
 
   return (
-    <main className="min-h-dvh pt-20">
-      <Suspense>
-      <h1 className="text-5xl text-green-400 text-center">Sign In</h1>
-      <form onSubmit={handleSubmit} className="w-1/4 mx-auto bg-green-400 flex flex-col p-2 my-20 rounded-xl">
-        <label className="mx-auto my-5">
-          <span className="p-1">Username</span>
-          <input
-            className="p-1"
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </label>
-        <label className="mx-auto my-5">
-          <span className="p-1">Password</span>
-          <input
-            className="p-1"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <button className="p-2 bg-green-900 rounded text-[#fafafa]" type="submit">Sign In</button>
-      </form>
-      {error ? (
-        <p style={{ color: "red" }}>{error}</p>
-      ) : null}
+    <div className="min-h-dvh pt-20">
+      <Suspense fallback={<div>Loading sign in...</div>}>
+        <AuthSigninClient />
       </Suspense>
-    </main>
+    </div>
   );
 }
