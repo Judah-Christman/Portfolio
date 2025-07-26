@@ -3,6 +3,7 @@
 import { FormEvent, useState, Suspense } from "react";
 import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
+import AuthSigninClient from '@/components/AuthSigninClient';
 
 export default function SignInPage() {
   const [username, setUsername] = useState("");
