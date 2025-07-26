@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next"
 import type { ReactNode } from "react";
 import { Providers } from "@/components/providers";
+import Footer from '@/components/Footer';
 
 
 export const metadata: Metadata = {
@@ -28,18 +29,7 @@ export default function RootLayout({
         <Providers>{children}</Providers>
         <Analytics />
         <SpeedInsights />
-        <div className="w-full h-20 p-2 relative bg-green-400 flex justify-between">
-          <p className="m-auto">Judah Christman 2025</p>
-            <a href="https://github.com/Judah-Christman" target="_blank">
-              <img
-                src="/images/github.png"
-                width={30}
-                height={30}
-                className="block my-auto"
-                alt="github"
-              />
-            </a>
-        </div>
+        <Footer/>
       </body>
     </html>
   );
