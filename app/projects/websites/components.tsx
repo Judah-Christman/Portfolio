@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 function Websites(){
 
-	const [website, setWebsite] = useState<{ id: string; link: string; description: string; title: string }[]>([]);
+	const [website, setWebsite] = useState<{ id: string; link: string; description: string; title: string; image: string }[]>([]);
 
 	useEffect(()=>{
 		fetchProject();

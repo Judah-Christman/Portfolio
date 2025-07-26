@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 function WebApps(){
 
-	const [webApp, setWebApp] = useState<{ id: string; link: string; description: string; title: string }[]>([]);
+	const [webApp, setWebApp] = useState<{ id: string; link: string; description: string; title: string; image: string }[]>([]);
 
 	useEffect(()=>{
 		fetchProject();
