@@ -1,13 +1,6 @@
 "use client";
-import { signOut } from "next-auth/react";
 import { useState, FormEvent } from "react";
-import { supabase } from "@/lib/supabaseClient";
-import { Filter } from "bad-words";
-import Link from "next/link";
 import { WebsiteCardCreator, WebAppCardCreator } from "./components";
-
-
-const filter = new Filter();
 
 interface Props {
   user?: {
