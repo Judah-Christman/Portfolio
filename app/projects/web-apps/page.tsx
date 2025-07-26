@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion';
-import { WebApps } from "./components.tsx";
+import { WebApps } from "./components";
 
 export default function Apps(){
 

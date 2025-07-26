@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from 'framer-motion';
-import { Websites } from "./components.tsx";
+import { Websites } from "./components";
 
 export default function Projects(){
 
