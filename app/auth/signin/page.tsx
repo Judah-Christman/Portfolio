@@ -1,7 +1,6 @@
 // app/auth/signin/page.tsx
 "use client";
-
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, Suspense } from "react";
 import { signIn } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
 
@@ -34,7 +33,7 @@ export default function SignInPage() {
   }
 
   return (
-    <main className="min-h-dvh pt-20">
+    <Suspense className="min-h-dvh pt-20">
       <h1 className="text-5xl text-green-400 text-center">Sign In</h1>
       <form onSubmit={handleSubmit} className="w-1/4 mx-auto bg-green-400 flex flex-col p-2 my-20 rounded-xl">
         <label className="mx-auto my-5">
@@ -62,6 +61,6 @@ export default function SignInPage() {
       {error ? (
         <p style={{ color: "red" }}>{error}</p>
       ) : null}
-    </main>
+    </Suspense>
   );
 }
