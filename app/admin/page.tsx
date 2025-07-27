@@ -6,9 +6,16 @@ import AdminClient from "./AdminClient";
 export default async function AdminPage() {
   const session = await getServerSession(authOptions);
 
-  if (!session) {
+  if (!session || !session.user) {
     redirect("/auth/signin?callbackUrl=/admin");
   }
 
-  return <AdminClient user={session.user} />;
+  // Runtime safeguard to avoid undefined props
+  const { id = "", name = "" } = session.user;
+
+  return (
+    <AdminClient
+      user={{ id, name }}
+    />
+  );
 }
