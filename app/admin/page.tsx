@@ -10,12 +10,8 @@ export default async function AdminPage() {
     redirect("/auth/signin?callbackUrl=/admin");
   }
 
-  // Runtime safeguard to avoid undefined props
-  const { id = "", name = "" } = session.user;
+  
+  const user = session.user as { id: string; name?: string; email?: string };
 
-  return (
-    <AdminClient
-      user={{ id, name }}
-    />
-  );
+  return <AdminClient user={user} />;
 }
