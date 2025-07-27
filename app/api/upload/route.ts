@@ -8,25 +8,27 @@ export async function POST(req: Request) {
     const file = formData.get('file') as File;
 
     if (!file) {
+      console.error("No file found in formData");
       return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });
     }
 
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
-    // Ensure uploads directory exists
     const uploadDir = path.join(process.cwd(), 'public/uploads');
     await mkdir(uploadDir, { recursive: true });
 
-    // Generate unique file name
     const fileName = `${Date.now()}_${file.name}`;
     const filePath = path.join(uploadDir, fileName);
 
     await writeFile(filePath, buffer);
 
+    console.log("File uploaded to", filePath);
+
     return NextResponse.json({ fileName });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Upload error:', error);
-    return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
+    return NextResponse.json({ error: error.message || 'Upload failed' }, { status: 500 });
   }
 }
+
