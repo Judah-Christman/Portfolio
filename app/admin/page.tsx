@@ -11,7 +11,7 @@ export default async function AdminPage() {
   }
 
   
-  const user = session.user as { id: string; name?: string };
+  const user = session.user as { id: string; name?: string | null; email?: string | null };
 
   return <AdminClient user={user} />;
 }
