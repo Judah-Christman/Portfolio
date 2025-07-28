@@ -321,7 +321,7 @@ export function WebAppCardCreator({ user }: Props) {
             <input
               type="file"
               accept="image/*"
-              onChange={(e) => setFile(e.target.files?.[0] || null)}
+              onChange={(e) => handleFileChange(e.target.files?.[0] || null)}
               className="mb-2"
             />
 
