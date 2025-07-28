@@ -25,73 +25,72 @@ export function WebsiteCardCreator({ user }: Props) {
   const [preview, setPreview] = useState<string | null>(null);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Basic validation
-    if (!newTitle.trim()) {
-      alert("Please enter a title.");
-      return;
-    } else if (!newDescription.trim()) {
-      alert("Please enter a description.");
-      return;
-    } else if (!newTool.trim()) {
-      alert("Please enter tool(s).");
+  if (!newTitle.trim()) {
+    alert("Please enter a title.");
+    return;
+  } else if (!newDescription.trim()) {
+    alert("Please enter a description.");
+    return;
+  } else if (!newTool.trim()) {
+    alert("Please enter tool(s).");
+    return;
+  }
+
+  if (filter.isProfane(newTitle) || filter.isProfane(newDescription)) {
+    alert("Please avoid using inappropriate language.");
+    return;
+  }
+
+  let uploadedFileUrl = "";
+  if (newImage) {
+    const formData = new FormData();
+    formData.append("file", newImage);
+
+    const uploadRes = await fetch("/api/upload", {
+      method: "POST",
+      body: formData,
+    });
+
+    const uploadData = await uploadRes.json();
+    if (!uploadRes.ok) {
+      alert("Failed to upload image.");
+      console.error(uploadData);
       return;
     }
 
-    // Profanity check
-    if (filter.isProfane(newTitle) || filter.isProfane(newDescription)) {
-      alert("Please avoid using inappropriate language.");
-      return;
-    }
+    uploadedFileUrl = uploadData.publicUrl;
+  }
 
-    let uploadedFileName = "";
-    if (newImage) {
-      const formData = new FormData();
-      formData.append("file", newImage);
+  const { data, error } = await supabase
+    .from("website")
+    .insert([
+      {
+        image: uploadedFileUrl,
+        title: newTitle,
+        description: newDescription,
+        tools: newTool,
+        link: newLink,
+      },
+    ])
+    .select();
 
-      const uploadRes = await fetch("/api/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      const uploadData = await uploadRes.json();
-      if (!uploadRes.ok) {
-        alert("Failed to upload image.");
-        console.error(uploadData);
-        return;
-      }
-      uploadedFileName = uploadData.fileName;
-    }
-
-    // Insert project into Supabase
-    const { data, error } = await supabase
-      .from("website")
-      .insert([
-        {
-          image: uploadedFileName, // store only filename
-          title: newTitle,
-          description: newDescription,
-          tools: newTool,
-          link: newLink,
-        },
-      ])
-      .select();
-
-    if (error) {
-      console.error("Insert error:", error);
-      alert("Failed to save. Try again.");
-    } else {
-      setNewTitle("");
-      setNewImage(null);
-      setNewDescription("");
-      setNewTool("");
-      setPreview(null);
-      if (data && data.length > 0) {
-        setProject([data[0], ...project]);
-      }
+  if (error) {
+    console.error("Insert error:", error);
+    alert("Failed to save. Try again.");
+  } else {
+    setNewTitle("");
+    setNewImage(null);
+    setNewDescription("");
+    setNewTool("");
+    setPreview(null);
+    if (data && data.length > 0) {
+      setProject([data[0], ...project]);
     }
   }
+}
+
 
   function handleFileChange(file: File | null) {
     setNewImage(file);
@@ -193,85 +192,103 @@ export function WebAppCardCreator({ user }: Props) {
   const [newTool, setNewTool] = useState("");
   const [newLink, setNewLink] = useState("");
   const [preview, setPreview] = useState<string | null>(null);
+  const [file, setFile] = useState<File | null>(null);
+  const [images, setImages] = useState<string[]>([]);
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
 
-    // Basic validation
-    if (!newTitle.trim()) {
-      alert("Please enter a title.");
-      return;
-    } else if (!newDescription.trim()) {
-      alert("Please enter a description.");
-      return;
-    } else if (!newTool.trim()) {
-      alert("Please enter tool(s).");
-      return;
-    }
 
-    // Profanity check
-    if (filter.isProfane(newTitle) || filter.isProfane(newDescription)) {
-      alert("Please avoid using inappropriate language.");
-      return;
-    }
+  const uploadImage = async () => {
+    if (!file) return;
 
-    let uploadedFileName = "";
-    if (newImage) {
-      const formData = new FormData();
-      formData.append("file", newImage);
-
-      const uploadRes = await fetch("/api/upload", {
-        method: "POST",
-        body: formData,
-      });
-
-      const uploadData = await uploadRes.json();
-      if (!uploadRes.ok) {
-        alert("Failed to upload image.");
-        console.error(uploadData);
-        return;
-      }
-      uploadedFileName = uploadData.fileName;
-    }
-
-    // Insert project into Supabase
-    const { data, error } = await supabase
-      .from("webapp")
-      .insert([
-        {
-          image: uploadedFileName, // store only filename
-          title: newTitle,
-          description: newDescription,
-          tools: newTool,
-          link: newLink,
-        },
-      ])
-      .select();
+    const fileName = `${Date.now()}-${file.name}`;
+    const { error } = await supabase.storage.from('images').upload(fileName, file);
 
     if (error) {
-      console.error("Insert error:", error);
-      alert("Failed to save. Try again.");
+      console.error('Upload error:', error.message);
     } else {
-      setNewTitle("");
-      setNewImage(null);
-      setNewDescription("");
-      setNewTool("");
-      setPreview(null);
-      if (data && data.length > 0) {
-        setProject([data[0], ...project]);
-      }
+      fetchImages(); // Refresh gallery
     }
+  };
+
+
+
+
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+
+  if (!newTitle.trim() || !newDescription.trim() || !newTool.trim()) {
+    alert("Please fill in all fields.");
+    return;
   }
 
-  function handleFileChange(file: File | null) {
-    setNewImage(file);
-    if (file) {
-      const previewURL = URL.createObjectURL(file);
-      setPreview(previewURL);
-    } else {
-      setPreview(null);
+  if (filter.isProfane(newTitle) || filter.isProfane(newDescription)) {
+    alert("Please avoid inappropriate language.");
+    return;
+  }
+
+  let uploadedFilePath = "";
+
+  if (newImage) {
+    const fileExt = newImage.name.split(".").pop();
+    const fileName = `${Date.now()}.${fileExt}`;
+    const filePath = `uploads/${fileName}`;
+
+    const { error: uploadError } = await supabase.storage
+      .from("images") // 👈 your bucket name
+      .upload(filePath, newImage, {
+        cacheControl: "3600",
+        upsert: false,
+      });
+
+    if (uploadError) {
+      console.error("Supabase upload error:", uploadError);
+      alert("Image upload failed.");
+      return;
+    }
+
+    uploadedFilePath = filePath;
+  }
+
+  const { data, error } = await supabase
+    .from("website")
+    .insert([
+      {
+        image: uploadedFilePath, // save the file path (relative to bucket)
+        title: newTitle,
+        description: newDescription,
+        tools: newTool,
+        link: newLink,
+      },
+    ])
+    .select();
+
+  if (error) {
+    console.error("Insert error:", error);
+    alert("Failed to save.");
+  } else {
+    setNewTitle("");
+    setNewImage(null);
+    setNewDescription("");
+    setNewTool("");
+    setPreview(null);
+    if (data && data.length > 0) {
+      setProject([data[0], ...project]);
     }
   }
+}
+  function handleFileChange(file: File | null) {
+  if (file) {
+    setNewImage(file); // store the file
+    const previewUrl = URL.createObjectURL(file);
+    setPreview(previewUrl); // store preview for <img src=... />
+  } else {
+    setNewImage(null);
+    setPreview(null);
+  }
+}
+
+
 
   return (
     <main className="pt-20 px-5 min-h-dvh">
@@ -306,16 +323,10 @@ export function WebAppCardCreator({ user }: Props) {
             <input
               type="file"
               accept="image/*"
-              onChange={(e) => handleFileChange(e.target.files?.[0] || null)}
-              className="w-full p-2 my-2 rounded bg-[#fafafa]"
+              onChange={(e) => setFile(e.target.files?.[0] || null)}
+              className="mb-2"
             />
-            {preview && (
-              <img
-                src={preview}
-                alt="Preview"
-                className="w-full h-auto my-2 rounded"
-              />
-            )}
+
 
             <textarea
               placeholder="Enter Description"
