@@ -205,8 +205,6 @@ export function WebAppCardCreator({ user }: Props) {
 
     if (error) {
       console.error('Upload error:', error.message);
-    } else {
-      fetchImages(); // Refresh gallery
     }
   };
 
