@@ -56,7 +56,7 @@ function WebApps() {
             transition={{ duration: 0.5, ease: 'easeInOut' }}
             viewport={{ once: true }}
           >
-            <div className="w-full md:h-[200px] h-fit flex items-start">
+            <div className="w-full md:h-[200px] h-fit md:flex items-start">
               <img
                 src={data.imageUrl}
                 alt={data.title}
@@ -70,7 +70,7 @@ function WebApps() {
                 >
                   {data.title}
                 </a>
-                <p className="m-auto text-justify text-md md:w-1/2 w-full p-2 text-[#fafafa]">
+                <p className="m-auto text-justify text-md md:w-1/2 w-full p-1 text-[#fafafa]">
                   {data.description}
                 </p>
               </div>
