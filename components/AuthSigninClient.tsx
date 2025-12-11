@@ -58,9 +58,11 @@ export default function AuthSigninClient() {
         </label>
         <button className="p-2 bg-green-900 rounded text-[#fafafa]" type="submit">Sign In</button>
       </form>
-      {error ? (
-        <p style={{ color: "red" }}>{error}</p>
-      ) : null}
+      <div className="relative">
+        {error ? (
+          <p className="absolute text-sm text-red-500 left-1/2 -translate-x-1/2">{error}</p>
+        ) : null}
+      </div>
     </main>
   );
 }
