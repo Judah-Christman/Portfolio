@@ -59,8 +59,8 @@ function About(){
   return(
     <section id="about" className="w-full h-fit">
 
-      <h2 className="w-full text-5xl text-green-300 text-center pt-20">About Me...</h2>
-        <div className="w-full lg:grid grid-cols-2 gap-x-0 items-center overflow-x-hidden">
+      <h2 className="w-full text-5xl text-green-300 text-center pt-20 mb-10">About Me...</h2>
+        <div className="w-full lg:grid grid-cols-2 gap-x-0 items-center overflow-x-hidden bg-gradient-to-l from-green-400/100 to-green-400/0">
           <motion.div
             className="overflow-hidden"
             initial={{ x: "-100%" }}
@@ -70,12 +70,12 @@ function About(){
             <img src="/images/headshot.jpg" className="w-3/4 sm:h-3/4 mx-auto my-20 rounded-3xl" alt="Profile" />
           </motion.div>
           <motion.div
-            className="overflow-hidden"
+            className="overflow-hidden flex flex-col items-center justify-center"
             initial={{ x: "100%" }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.5, ease: 'easeInOut'}}
             viewport={{ once: true }}>
-            <p className="sm:w-full md:w-3/4 mx-auto p-3 text-justify text-lg text-[#fafafa] mb-20 bg-green-400/70 sm:my-20 sm:rounded-3xl sm:h-3/4 border-[5px] border-green-400 ">Hello! I am a web developer who has been crafting websites for the last 6 years. Most of my experience comes from creating websites for fun as a hobby but have built a few websites for local businesses. I have built many different websites from simple landing pages advertising businesses to multipage websites managed by an admin dashboard. I specialize in Next.js, Tailwind CSS, and Framer Motion, developing quick and interactive websites and web apps for all kinds of needs. I have also developed sites that integrate with databases using REST api’s, or that pull data from online csv sheets. Whether you need a landing page to advertise your business and provide contact information, or an admin console managed webpage that displays your products and/or events, I have you covered. Reach out today and I am sure we can develop something great together!</p>
+            <p className="sm:w-full md:w-3/4 mx-auto p-2 text-justify text-lg text-[#fafafa]">Hello! I am a frontend focused web developer who has been crafting websites over the last 7 years. Most of my early projects solidified my foundation in HTML, CSS, and Javascript. I have made a number of websites as a hobby using these tools. Now, and for the last few years, I have been using React, TypeScript, and Next.js for developing efficient websites as well as web apps. To make these web apps more interactive and sleek I primarily use Tailwind CSS and Framer Motion. I am also familiar with using tools such as WireFrame and Figma to setup and design websites, or to translate a design into functioning code. My journey has brought me from working on small simple HTML based websites/blogs, to developing large-scale CMS applications among a team. Whatever challenge comes my way I am certain I can overcome it with my knowledge and eagerness to continue learning and improving my talents!</p>
           </motion.div>
         </div>
     </section>
